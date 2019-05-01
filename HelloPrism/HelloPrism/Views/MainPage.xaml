@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="HelloPrism.Views.MainPage">
+    
+    <StackLayout HorizontalOptions="CenterAndExpand">
+        <Entry Text="{Binding FirstValue}" Keyboard="Numeric" AutomationId = "FirstValue"/>
+        <Entry Text="{Binding OperationValue}" AutomationId = "OperationValue"/>
+        <Entry Text="{Binding SecondValue}" Keyboard="Numeric" AutomationId = "SecondValue"/>
+        <Button Text="Calculate" Command="{Binding CalcCommand}" AutomationId = "CalculateBtn"/>
+        <Entry Text="{Binding AnswerValue}" Keyboard="Numeric" AutomationId = "AnswerValue"/>
+     </StackLayout>
+</ContentPage>
